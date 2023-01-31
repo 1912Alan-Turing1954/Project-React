@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css'
 
 function App() {
-  const [list, setList] = useState([1]);
+  const [list, setList] = useState([]);
   const [input, setInput] = useState("")
 
   const addTodo = (todo) => {
@@ -10,8 +10,11 @@ function App() {
       id: Math.random(),
       todo: todo
     }
+    //add a todo
+    setList([...list, newTodo]);
 
-    setList
+    //clear input box
+    setInput("");
   }
 
   return (
@@ -42,7 +45,7 @@ function App() {
           value={input} 
           onChange={(e) => setInput(e.target.value)}
         />
-        <button>Add</button>
+        <button onClick={() => addTodo(input)}>Add</button>
       </section>
     
       <footer>
