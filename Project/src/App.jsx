@@ -1,6 +1,19 @@
+import { useState } from 'react';
 import './App.css'
 
 function App() {
+  const [list, setList] = useState([1]);
+  const [input, setInput] = useState("")
+
+  const addTodo = (todo) => {
+    const newTodo = {
+      id: Math.random(),
+      todo: todo
+    }
+
+    setList
+  }
+
   return (
     <div class="body">
       <header>
@@ -24,7 +37,12 @@ function App() {
       </header>
       
       <section class="main">
-
+        <input 
+          type="text"   
+          value={input} 
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button>Add</button>
       </section>
     
       <footer>
