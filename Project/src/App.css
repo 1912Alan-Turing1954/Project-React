@@ -43,6 +43,12 @@ section.main {
   flex-grow: 1;
 }
 
+section.main div {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 footer {
   display: flex;
   height: 100px;

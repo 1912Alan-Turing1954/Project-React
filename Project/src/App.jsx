@@ -40,12 +40,14 @@ function App() {
       </header>
       
       <section class="main">
-        <input 
-          type="text"   
-          value={input} 
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button onClick={() => addTodo(input)}>Add</button>
+        <div>
+          <input 
+            type="text"   
+            value={input} 
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button onClick={() => addTodo(input)}>Add</button>
+        </div>
       </section>
     
       <footer>
