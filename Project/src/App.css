@@ -3,6 +3,8 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
+  font-family: Franklin Gothic Medium;
+  /* color: whitesmoke; */
 }
 
 .body {
@@ -10,12 +12,12 @@
   flex-direction: column;
   margin: 0;
   height: 100vh;
+  background: linear-gradient(#242424, #303030);
 }
 
 header {
   display: flex;
   height: 100px;
-  background-color: gray;
 }
 
 header {
@@ -23,9 +25,29 @@ header {
   align-items: center;
 }
 
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.title {
+  color: whitesmoke;
+  text-shadow: 10px 8px black;
+}
+
+.title:hover {
+  transition: all 0.3s ease-in-out 0.3s;
+  transform: scale(1.1);
+}
+
 .nav_links ul, a, button {
   display: inline-block;
   font-size: 1em;
+  color: whitesmoke;
 }
 
 .nav_links li {
@@ -33,31 +55,64 @@ header {
   padding: 0px 1.5em;
 }
 
-a {
+.nav_linkss ul, a button:hover {
+  transform: scale(1.1);
+}
+
+a:hover {
   transition: all 0.3s ease 0s;
+  transform: scale(1.1);
 }
 
 section.main {
   display: flex;
   height: 100px;
   flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: larger;
+  color: whitesmoke;
+  padding-top: 10px;
 }
 
-section.main div {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+section.main .input {
+  padding: 5px;
+  outline: none;
+  font-size: x-large;
+  background: rgba(0, 136, 169, 1);
+  box-shadow: 10px 10px black;
+  border-radius: 5%;
+}
+
+section.main .addBtn {
+  border-radius: 10%;
+  outline: none;
+  padding: 8px;
+  border-color: none;
+  background: rgba(0, 136, 169, 1);
+  box-shadow: 10px 10px black;
+}
+
+form {
+  display:flex;
+  flex-direction:row;
+  /* I've used padding so you can see the edges of the elements. */
+  padding:1px;
+}
+
+form input {
+  color: whitesmoke;
 }
 
 footer {
   display: flex;
   height: 100px;
-  background-color: gray;
 }
 
 footer {
   justify-content: space-around;
-  align-items: center;
+  align-items: center;  
 }
 
 
@@ -72,4 +127,5 @@ footer {
 
 .about_footer {
   border-right: .1em solid white;
+  color: black;
 }

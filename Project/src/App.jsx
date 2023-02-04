@@ -41,12 +41,16 @@ function App() {
       
       <section class="main">
         <div>
-          <input 
+          <label>Todo-List</label><br></br>
+          <form>
+          <input
+            class="input"
             type="text"   
             value={input} 
             onChange={(e) => setInput(e.target.value)}
           />
-          <button onClick={() => addTodo(input)}>Add</button>
+          <button class="addBtn" onClick={() => addTodo(input)}>Add</button>
+          </form>
         </div>
       </section>
     
