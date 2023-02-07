@@ -35,7 +35,7 @@ function App() {
           <nav>
             <ul class="#">
               <li class="home"><a href="#">Home</a></li>
-              <li class="about"><a href="#">About</a></li>
+              <li class="about"><a href="https://github.com/1912Alan-Turing1954/Project-React">About</a></li>
             </ul>
           <a href="https://www.linkedin.com/in/logan-m-51427a264/"><button class="contact">Contact</button></a>
           </nav>
@@ -70,7 +70,7 @@ function App() {
             <div class="footer_links">
               <nav>
                 <ul class="#">
-                  <li class="about_footer"><a href="#" class="#">About</a></li>
+                  <li class="about_footer"><a href="https://github.com/1912Alan-Turing1954/Project-React" class="#">About</a></li>
                   <li class="contact"><a href="#">Contact</a></li>
                 </ul>  
               </nav>
