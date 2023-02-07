@@ -1,23 +1,27 @@
-* {
+body {
   margin: 0;
   padding: 0;
+  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a, li {
   list-style: none;
   text-decoration: none;
-  font-family: Franklin Gothic Medium;
-  /* color: whitesmoke; */
 }
 
 .body {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  height: 100vh;
-  background: linear-gradient(#242424, #303030);
+  /* height: 100vh; */
 }
 
 header {
   display: flex;
-  height: 100px;
+  height: px;
+  border-bottom: 1px solid rgba(0, 136, 169, 1);
+  background-color: #303030;
+  padding: 1em;
 }
 
 header {
@@ -25,7 +29,7 @@ header {
   align-items: center;
 }
 
-button {
+button.contact {
   padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
   border: none;
@@ -36,7 +40,7 @@ button {
 
 .title {
   color: whitesmoke;
-  text-shadow: 10px 8px black;
+  text-shadow: 10px 8px 10px black;
 }
 
 .title:hover {
@@ -66,48 +70,75 @@ a:hover {
 
 section.main {
   display: flex;
-  height: 100px;
+  height: 100%;
   flex-grow: 1;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   font-size: larger;
   color: whitesmoke;
-  padding-top: 10px;
+  background: linear-gradient(#242424, #232323);
 }
 
+section.main div {
+  border: 1px solid rgba(0, 136, 169, 1);
+  padding-bottom: 10em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.todo {
+  margin-top: 5em;
+  background-color: #303030;
+  box-shadow: 10px 15px 10px #151515;
+  margin-bottom: 5em;
+}
+
+.todo:hover {
+  transform: scale(1.01);
+  transition: all 1s ease-in-out;
+} 
+
 section.main .input {
-  padding: 5px;
   outline: none;
   font-size: x-large;
   background: rgba(0, 136, 169, 1);
-  box-shadow: 10px 10px black;
   border-radius: 5%;
+  color: whitesmoke;
+}
+section.main .addBtn .input {
+  display: inline-block;
+  box-shadow: 10px 10px black;
+}
+
+section.main button {
+  color: whitesmoke;
+  background: rgba(0, 136, 169, 1);
+  padding: .4em;
+  border-radius: 10%;
 }
 
 section.main .addBtn {
-  border-radius: 10%;
   outline: none;
-  padding: 8px;
   border-color: none;
   background: rgba(0, 136, 169, 1);
-  box-shadow: 10px 10px black;
 }
 
-form {
-  display:flex;
-  flex-direction:row;
-  /* I've used padding so you can see the edges of the elements. */
-  padding:1px;
+.todoList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-form input {
-  color: whitesmoke;
+.todoList button {
+  justify-content: flex-end;
 }
 
 footer {
   display: flex;
   height: 100px;
+  background-color: #303030;
+  border-top: 1px solid rgba(0, 136, 169, 1);
 }
 
 footer {

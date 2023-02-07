@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css'
 
-function App() {
+function App() {  
   const [list, setList] = useState([]);
   const [input, setInput] = useState("")
 
@@ -17,12 +17,18 @@ function App() {
     setInput("");
   }
 
+  const deleteTodo = (id) => {
+    const newList = list.filter((todo) => todo.id !== id)
+
+    setList(newList);
+  }
+
   return (
     <div class="body">
-      <header>
+      <header class="main_header">
         
         <div class="title">
-          <h1 class="title_main">Test Blog</h1>
+          <h1 class="title_main">Todo List</h1>
         </div>
 
         <div class="nav_links">  
@@ -30,19 +36,16 @@ function App() {
             <ul class="#">
               <li class="home"><a href="#">Home</a></li>
               <li class="about"><a href="#">About</a></li>
-              <li class="contact"><a href="#">Contact</a></li>
             </ul>
-          <toggle ></toggle>
-          <a href="#"><button class="#">Contact</button></a>
+          <a href="https://www.linkedin.com/in/logan-m-51427a264/"><button class="contact">Contact</button></a>
           </nav>
         </div>
       
       </header>
       
       <section class="main">
-        <div>
+        <div class="todo">
           <label>Todo-List</label><br></br>
-          <form>
           <input
             class="input"
             type="text"   
@@ -50,7 +53,14 @@ function App() {
             onChange={(e) => setInput(e.target.value)}
           />
           <button class="addBtn" onClick={() => addTodo(input)}>Add</button>
-          </form>
+          <ul class="todoList">
+            {list.map((todo) => (
+              <li key={todo.id}>
+                {todo.todo}
+                <button onClick={() => deleteTodo(todo.id)}>Delete</button>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     
