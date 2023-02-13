@@ -18,7 +18,7 @@ a, li {
 
 header {
   display: flex;
-  height: px;
+  height: 100px;
   border-bottom: 1px solid rgba(0, 136, 169, 1);
   background-color: #303030;
   padding: 1em;
