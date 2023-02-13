@@ -145,15 +145,14 @@ section.main .addBtn {
 .todoList {
   display: flex;
   flex-direction: column;
+  gap: 1em;
 }
 
 .todoList li {
-  gap: 10px;
   border: 1px solid rgba(0, 136, 169, 1);
-  padding: 1em;
+  padding: 0.5em;
   grid-template-columns: 4fr 2fr;
   background: #232323;
-  
 }
 
 .todoList button {
