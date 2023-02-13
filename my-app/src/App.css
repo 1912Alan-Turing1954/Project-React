@@ -41,6 +41,7 @@ button.contact {
 .title {
   color: whitesmoke;
   text-shadow: 10px 8px 10px black;
+  cursor: pointer;
 }
 
 .title:hover {
@@ -80,7 +81,7 @@ section.main {
   background: linear-gradient(#242424, #232323);
 }
 
-section.main div {
+section.main .todo {
   border: 1px solid rgba(0, 136, 169, 1);
   padding-bottom: 10em;
   padding-left: 10px;
@@ -92,6 +93,8 @@ section.main div {
   background-color: #303030;
   box-shadow: 10px 15px 10px #151515;
   margin-bottom: 5em;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .todo:hover {
@@ -103,35 +106,65 @@ section.main .input {
   outline: none;
   font-size: x-large;
   background: rgba(0, 136, 169, 1);
-  border-radius: 5%;
+  border-radius: 1.2em;
   color: whitesmoke;
+  border: none;
+  padding: 0.3em;
 }
+
+.input::placeholder {
+  color: white;
+}
+
 section.main .addBtn .input {
   display: inline-block;
   box-shadow: 10px 10px black;
 }
+/* 
+.box {
+  padding: 0.1em;
+  margin: 0;
+  border: 1px solid rgba(0, 136, 169, 1);
+  background: #232323;
+} */
 
-section.main button {
+section.main .addBtn {
   color: whitesmoke;
   background: rgba(0, 136, 169, 1);
-  padding: .4em;
-  border-radius: 10%;
+  padding: 0.5em;
+  /* border-radius: 0.8em; */
 }
 
 section.main .addBtn {
   outline: none;
   border-color: none;
   background: rgba(0, 136, 169, 1);
+  cursor: pointer;
 }
 
 .todoList {
   display: flex;
   flex-direction: column;
+}
+
+.todoList li {
   gap: 10px;
+  border: 1px solid rgba(0, 136, 169, 1);
+  padding: 1em;
+  grid-template-columns: 4fr 2fr;
+  background: #232323;
+  
 }
 
 .todoList button {
-  justify-content: flex-end;
+  float: right;
+  border: none;
+  border-radius: 1.2em;
+  background: rgba(0, 136, 169, 1);
+  padding: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  cursor: pointer;
 }
 
 footer {

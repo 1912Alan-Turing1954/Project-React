@@ -46,13 +46,16 @@ function App() {
       <section class="main">
         <div class="todo">
           <label>Todo-List</label><br></br>
-          <input
-            class="input"
-            type="text"   
-            value={input} 
-            onChange={(e) => setInput(e.target.value)}
-          />
-          <button class="addBtn" onClick={() => addTodo(input)}>Add</button>
+          <div class="box">
+            <input
+              placeholder='Enter todo here...'
+              class="input"
+              type="text"   
+              value={input} 
+              onChange={(e) => setInput(e.target.value)}
+            />
+            <button class="addBtn" onClick={() => addTodo(input)}>Add Todo</button>
+          </div>
           <ul class="todoList">
             {list.map((todo) => (
               <li key={todo.id}>
