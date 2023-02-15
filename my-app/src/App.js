@@ -28,7 +28,7 @@ function App() {
       <header class="main_header">
         
         <div class="title">
-          <h1 class="title_main">Todohello List</h1>
+          <h1 class="title_main">Todo List</h1>
         </div>
 
         <div class="nav_links">  
